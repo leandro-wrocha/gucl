@@ -197,6 +197,42 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@prisma/debug@5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-5.12.0.tgz#0d5d94f095ae2d7e59ce89d32ad7bc4112b155b0"
+  integrity sha512-wK3fQLxPLMqf5riT5ZIhl8NffPSzFUwtzFX5CH7z/oI9Swmo9UhQlUgZABIVgdXSJ5OAlmRcDZtDKaMApIl8sg==
+
+"@prisma/engines-version@5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab":
+  version "5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab.tgz#c78d099a3fe86d446db7442e64e56987e39e7f32"
+  integrity sha512-6yvO8s80Tym61aB4QNtYZfWVmE3pwqe807jEtzm8C5VDe7nw8O1FGX3TXUaXmWV0fQTIAfRbeL2Gwrndabp/0g==
+
+"@prisma/engines@5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-5.12.0.tgz#81a060d6eaf3da65c29bc7d81cd74fae72f13675"
+  integrity sha512-rFNRul9JGu0d3tf8etBgmDQ4NVoDwgGrRguvQOc8i+c6g7xPjRuu4aKzMMvHWUuccvRx5+fs1KMBxQ0x2THt+Q==
+  dependencies:
+    "@prisma/debug" "5.12.0"
+    "@prisma/engines-version" "5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab"
+    "@prisma/fetch-engine" "5.12.0"
+    "@prisma/get-platform" "5.12.0"
+
+"@prisma/fetch-engine@5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@prisma/fetch-engine/-/fetch-engine-5.12.0.tgz#0418b29a0b473bb633871b43e3eb45c57a9157e5"
+  integrity sha512-qkHQbZ1hspvOwcImvqY4yj7+FUlw0+uP+6tu3g24V4ULHOXLLkvr5ZZc6vy26OF0hkbD3kcDJCeutFis3poKgg==
+  dependencies:
+    "@prisma/debug" "5.12.0"
+    "@prisma/engines-version" "5.12.0-21.473ed3124229e22d881cb7addf559799debae1ab"
+    "@prisma/get-platform" "5.12.0"
+
+"@prisma/get-platform@5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@prisma/get-platform/-/get-platform-5.12.0.tgz#72b3ca03181d6bb20596b40ed581d5e0b06512ec"
+  integrity sha512-81Ptv9YJnwTArEBPQ2Lvu58sZPxy4OixKxVVgysFan6A3bFP7q8gIg15WTjsRuH4WXh6B667EM9sqoMTNu0fLQ==
+  dependencies:
+    "@prisma/debug" "5.12.0"
+
 "@rushstack/eslint-patch@^1.3.3":
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.1.tgz#7ca168b6937818e9a74b47ac4e2112b2e1a024cf"
@@ -2119,6 +2155,13 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
+prisma@^5.12.0:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-5.12.0.tgz#b4194a549f5e0365233fb14f3fadef3bed057b5e"
+  integrity sha512-zxw4WSIvpsyNbpv8r7Fxgm7nwTFVmD6wbN6VuH13lClOceSANDOMl4jO3oxE6VzhjxmnEJqOGZjON2T2UpmLag==
+  dependencies:
+    "@prisma/engines" "5.12.0"
+
 prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
@@ -2350,6 +2393,7 @@ streamsearch@^1.1.0:
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -2414,6 +2458,7 @@ string.prototype.trimstart@^1.0.7:
     es-object-atoms "^1.0.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
