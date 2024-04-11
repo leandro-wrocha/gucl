@@ -1,14 +1,12 @@
 FROM node:lts-alpine
 
-WORKDIR /src
+WORKDIR /app
 
 COPY package*.json yarn.lock ./
 
 RUN yarn install
 
 COPY . .
-
-COPY prisma ./prisma
 
 EXPOSE 3000
 

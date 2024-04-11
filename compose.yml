@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   gucl_db:
@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "5432:5432"
+      - 5432:5432
 
   gucl_site:
     container_name: gucl_web
@@ -17,8 +17,15 @@ services:
       context: ./
       dockerfile: dockerfile
     volumes:
-      - .:/src
+      - .:/app
+    links:
+      - gucl_db
     ports:
-      - "3000:3000"
+      - 3000:3000
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      DATABASE_URL: ${DATABASE_URL_DOCKER}
