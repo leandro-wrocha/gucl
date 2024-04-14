@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "rebuild": "docker-compose up --build -d gucl_site"
   },
   "prisma": {
     "seed": "tsx prisma/seeds/index.ts"
